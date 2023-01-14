@@ -1,0 +1,12 @@
+diff --git a/src/lib_ccx/params.c b/src/lib_ccx/params.c
+index 8f7a281..449af45 100644
+--- a/src/lib_ccx/params.c
++++ b/src/lib_ccx/params.c
+@@ -1,6 +1,7 @@
+ #include "png.h"
+ #include "protobuf-c.h"
+ #include "zlib.h"
++#include "gpac/setup.h"
+ #include "gpac/version.h"
+ #include "lib_ccx.h"
+ #include "ccx_common_option.h"
