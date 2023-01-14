@@ -27,6 +27,12 @@ class Ccextractor < Formula
     sha256 "eb545afad2d1d47a22f50ec0cdad0da11e875d5119213b0e5ace36488f08d237"
   end
 
+  # Support building with newer versions of GPAC
+  patch do
+    url "https://raw.githubusercontent.com/alebcay/homebrew-ccextractor/8f7d29c70d7d75b6328cf07956bc989b3aeada53/patches/gpac2-support.patch"
+    sha256 "89f4e459b8d0dc9e6776c9eadaec1994725325944afa4adcd7f824c971acccf2"
+  end
+
   def install
     # Multiple source files reference these dependencies with non-standard #include paths
     ENV["EXTRA_INCLUDE"] = "-I#{Formula["leptonica"].include} -I#{Formula["protobuf-c"].include/"protobuf-c"}"
