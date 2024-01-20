@@ -9,11 +9,11 @@ class Ccextractor < Formula
   depends_on "pkg-config" => :build
   depends_on "freetype"
   depends_on "gpac"
-  depends_on "leptonica"
+  # depends_on "leptonica"
   depends_on "libarchive"
   depends_on "libpng"
   depends_on "protobuf-c"
-  depends_on "tesseract"
+  # depends_on "tesseract"
   depends_on "utf8proc"
 
   resource "homebrew-test.mxf" do
@@ -39,7 +39,7 @@ class Ccextractor < Formula
 
     if OS.mac?
       platform = "mac"
-      build_script = ["./build.command", "OCR"]
+      build_script = ["./build.command"]
     else
       platform = "linux"
       build_script = ["./build", "-without-rust"]
